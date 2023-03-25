@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/current.css">
+    </head>
+    <body>
+        <div id="body">
+            <div class="company-logo-wrapper">
+                <img
+                    class="company-logo"
+                    src="./img/logo.png"
+                    alt="$company.name logo"
+                />
+            </div>
+
+            <div class="client-entity-wrapper" style="">
+                <div class="wrapper-left-side">
+                    <div class="text-with-client">
+                        <h2 class="wrapper-info-text">Client</h2>
+
+                        <div id="client-details">Hello Mohd Rejoan</div>
+                    </div>
+
+                    <div class="wrapper-right-side"></div>
+                </div>
+            </div>
+
+            <table
+                id="entity-details"
+                cellspacing="0"
+                cellpadding="0"
+                dir="$dir"
+            ></table>
+
+            <table id="product-table" cellspacing="0" data-ref="table"></table>
+            <table id="task-table" cellspacing="0" data-ref="table"></table>
+            <table
+                id="delivery-note-table"
+                cellspacing="0"
+                data-ref="table"
+            ></table>
+            <table
+                id="statement-invoice-table"
+                cellspacing="0"
+                data-ref="table"
+            ></table>
+            <div
+                id="statement-invoice-table-totals"
+                data-ref="statement-totals"
+            ></div>
+            <table
+                id="statement-payment-table"
+                cellspacing="0"
+                data-ref="table"
+            ></table>
+            <div
+                id="statement-payment-table-totals"
+                data-ref="statement-totals"
+            ></div>
+            <table
+                id="statement-aging-table"
+                cellspacing="0"
+                data-ref="table"
+            ></table>
+
+            <div
+                id="statement-aging-table-totals"
+                data-ref="statement-totals"
+            ></div>
+
+            <div id="table-totals" cellspacing="0">$status_logo</div>
+        </div>
+    </body>
+</html>
