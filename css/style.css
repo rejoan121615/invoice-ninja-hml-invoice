@@ -1,34 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url($font_url);
 
 :root {
     --primary-color: $primary_color;
     --secondary-color: $secondary_color;
-    --third-color: #808080;
     --line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
-    --lg-font-size: 15px;
+    /* --lg-font-size: 15px;
     --mid-font-size: 15px;
-    --sm-font-size: 10px;
+    --sm-font-size: 10px; */
+}
+
+html {
+    width: 210mm;
+    height: 297mm;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: $font_name, Helvetica, sans-serif;
+    font-size: $font_size !important;
+    zoom: 80%;
+}
+
+/* #body {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10mm 19mm 0mm 18mm;
+    box-sizing: border-box;
+} */
+
+@page {
+    margin: $global_margin;
+    size: $page_size $page_layout;
 }
 
 p {
     margin: 0;
     padding: 0;
-}
-
-#body {
-    width: 210mm;
-    height: 297mm;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
-    padding: 10mm 19mm 0mm 18mm;
-    box-sizing: border-box;
 }
 
 ul {
@@ -56,9 +64,11 @@ ul {
 }
 
 .company-logo-wrapper img {
-    width: 76mm;
+    max-width: $company_logo_size;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
-
 
 /* client info  */
 .client-wrapper {
@@ -76,7 +86,6 @@ ul {
 }
 
 .client-wrapper .row .details {
-
 }
 
 /* invoice info  */
@@ -116,8 +125,10 @@ ul {
     justify-content: space-between;
 }
 
-.address, .terms-and-invoice, .how-to-pay {
-    color: var(--third-color);
+.address,
+.terms-and-invoice,
+.how-to-pay {
+    color: var(--secondary-color);
 }
 
 .total-price {

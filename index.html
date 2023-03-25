@@ -12,43 +12,49 @@
             <div class="company-logo-wrapper">
                 <img
                     class="company-logo"
-                    src="./img/logo.png"
-                    alt="company logo"
+                    src="$company.logo"
+                    alt="$company.name logo"
                 />
             </div>
             <!-- client info  -->
-            <div class="client-wrapper">
+            <div class="client-wrapper" id="client-details">
                 <div class="row">
                     <p class="title">Attention:</p>
-                    <div class="details"><p>Sample Client</p></div>
+                    <div class="details" data-ref="client_details-client.name">
+                        <p>$client.name</p>
+                    </div>
                 </div>
                 <div class="row">
                     <p class="title">Client</p>
                     <div class="details">
-                        <p>Sample Client Company</p>
-                        <p>sample@client.com</p>
-                        <p>1234567890</p>
+                        <p data-ref="client_details-client.company">
+                            $client.email Company
+                        </p>
+                        <p data-ref="client_details-client.email">
+                            $client.email
+                        </p>
+                        <p data-ref="client_details-client.phone">
+                            $client.phone
+                        </p>
                     </div>
                 </div>
             </div>
             <!-- invoice info  -->
-            <div class="invoice-info">
-                <div class="date-wrap row">
+            <div class="invoice-info" id="entity-details">
+                <div class="date-wrap row" data-ref="entity_details-invoice.date">
                     <p class="title">Date of invoice: &nbsp;</p>
-                    <p>March 21, 2023</p>
+                    <p>$invoice.date</p>
                 </div>
-                <div class="tracking row">
+                <div class="tracking row" data-ref="entity_details-invoice.number">
                     <p class="title">Invoice tracking #: &nbsp;</p>
-                    <p>2022079</p>
+                    <p>$invoice.number</p>
                 </div>
             </div>
             <!-- projects  -->
-            <div class="product-wrap">
+            <div class="product-wrap" id="product-table">
                 <div class="top-border"></div>
-                <p class="project-name">
-                    Project: 10363 – 149 St NW (Lot 26 Block 11 Plan 7601AE)
-                </p>
-                <ol class="project-list">
+                <p class="project-name" data-ref="product_table-product.item-th">$product.item</p>
+                <ol class="project-list" data-ref="product_table-product.description-th">
                     <li>
                         <div class="row">
                             <p>Poreliminary Plot Plan</p>
@@ -64,7 +70,7 @@
                 </ol>
             </div>
             <!-- total prices  -->
-            <ul class="total-price">
+            <ul class="total-price" id="table-totals">
                 <li>
                     <div class="row-space">
                         <p>Sub total:</p>
@@ -81,7 +87,7 @@
                 </li>
             </ul>
             <!-- address box  -->
-            <ul class="address">
+            <ul class="address" id="company-address">
                 <li class="">
                     <span>Address</span> | <span>City</span> |
                     <span>Postal</span>
@@ -95,40 +101,44 @@
                     <span>www.website.com</span>
                 </li>
             </ul>
-            <!-- terms  -->
-            <div class="terms-and-invoice">
-                <p>
-                    <span class="bold">Terms</span> (unless otherwise agreed to
-                    in writing): Full payment is due in 30 days. Late payment
-                    fee of either $100.00 or 4% of the invoice Sub total
-                    (whichever is greater), plus GST, will apply after 60 days,
-                    and will be charged each month your invoice remains unpaid.
-                    In 45 days we will register a builders lien against the
-                    property. The lien will be removed when full payment, late
-                    payment fees and applicable administrative fees are
-                    received.
-                </p>
-            </div>
-            <div class="how-to-pay">
-                <p>
-                    <span class="bold">How to pay your invoice:</span> <br />
-                    <span
-                        >Cheque - payable to Ivo Surveys. Write the Invoice
-                        tracking # on the cheque.</span
-                    >
-                    <br />
-                    <span
-                        >Credit card - Visa and MasterCard only. Load fees will
-                        apply in addition to the Total due.</span
-                    >
-                    <br />
-                    <span
-                        >Interac e-Transfer – Write the Invoice tracking # in
-                        the message field. If you set a password, make it
-                        <span class="blue"> Edmonton. </span>
-                    </span>
-                    <br />
-                </p>
+            <!-- footer  -->
+            <div id="footer">
+                <!-- terms  -->
+                <div class="terms-and-invoice">
+                    <p>
+                        <span class="bold">Terms</span> (unless otherwise agreed
+                        to in writing): Full payment is due in 30 days. Late
+                        payment fee of either $100.00 or 4% of the invoice Sub
+                        total (whichever is greater), plus GST, will apply after
+                        60 days, and will be charged each month your invoice
+                        remains unpaid. In 45 days we will register a builders
+                        lien against the property. The lien will be removed when
+                        full payment, late payment fees and applicable
+                        administrative fees are received.
+                    </p>
+                </div>
+                <div class="how-to-pay">
+                    <p>
+                        <span class="bold">How to pay your invoice:</span>
+                        <br />
+                        <span
+                            >Cheque - payable to Ivo Surveys. Write the Invoice
+                            tracking # on the cheque.</span
+                        >
+                        <br />
+                        <span
+                            >Credit card - Visa and MasterCard only. Load fees
+                            will apply in addition to the Total due.</span
+                        >
+                        <br />
+                        <span
+                            >Interac e-Transfer – Write the Invoice tracking #
+                            in the message field. If you set a password, make it
+                            <span class="blue"> Edmonton. </span>
+                        </span>
+                        <br />
+                    </p>
+                </div>
             </div>
         </div>
     </body>
